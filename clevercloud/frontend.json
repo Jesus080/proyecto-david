@@ -1,0 +1,10 @@
+{
+  "build": {
+    "type": "static",
+    "folder": "frontend/dist"
+  },
+  "deploy": {
+    "buildCommand": "cd frontend && npm install && npm run build",
+    "staticFolder": "frontend/dist"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "build": {
+    "type": "node",
+    "buildCommand": "cd backend && npm install"
+  },
+  "deploy": {
+    "goal": "backend",
+    "startCommand": "cd backend && npm start"
+  }
+}

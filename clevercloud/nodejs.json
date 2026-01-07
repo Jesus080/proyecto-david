@@ -1,0 +1,8 @@
+{
+  "deploy": {
+    "appName": "gestor-gastos-api"
+  },
+  "hooks": {
+    "postDeploy": "npm run migrate"
+  }
+}

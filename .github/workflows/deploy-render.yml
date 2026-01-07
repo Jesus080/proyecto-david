@@ -1,0 +1,27 @@
+name: Deploy to Render
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Deploy Hook
+      run: |
+        if [ -n "${{ secrets.RENDER_DEPLOY_HOOK }}" ]; then
+          curl "${{ secrets.RENDER_DEPLOY_HOOK }}"
+        else
+          echo "No deploy hook configured. Render will auto-deploy from GitHub."
+        fi
+    
+    - name: Wait for deployment
+      run: sleep 30
+    
+    - name: Deployment complete
+      run: echo "✅ Deployment to Render completed!"

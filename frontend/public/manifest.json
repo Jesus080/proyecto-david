@@ -1,0 +1,13 @@
+{
+  "name": "Gestor de Gastos",
+  "short_name": "Gastos",
+  "description": "Aplicación para gestionar tus gastos personales",
+  "theme_color": "#00ffff",
+  "background_color": "#0f172a",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [],
+  "categories": ["finance", "productivity"]
+}
