@@ -57,4 +57,3 @@ services:
         name: X-XSS-Protection
         value: 1; mode=block
     autoDeploy: true
-    plan: free
